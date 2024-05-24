@@ -2,7 +2,7 @@
 
 This should be my next project, maybe a bit ambitious..but fun!
 This will be a platform giving people the opportunity to choose how to nicely spend some time off - with the help of a random generator and like-minded people looking for nice and interesting company.
-If your friends are out there waiting for you - no doubt, just got get them!
+If your friends are out there waiting for you - no doubt, just go join them!
 If you are at home alone, not knowing how to spend the eve, either calling around few people to get some company, going to a bar by yourself or grabbing the cosy blanket and the remote control - then this is for you!
 
 Jakyjty stands for 'which -ty', meaning you have the choice between party and charity, 'яакий' meaning 'which' in Ukrainian.

@@ -11,4 +11,7 @@ charity or party!
 This means that if it chooses 'party' you get suggestions of fellow participants in your region that also got this option to find a common meeting place for an uncomplicated hang-out together and meet new people.
 If it chooses 'charity' you will have the opportunity to choose from some areas within the platform suggesting several possibilities to spend some great time together with other likeminded people while staying at home and donating the amount you committet to a charity agency you have choosen in the beginning. You will have the option to play board games online ( maybe even some that are not available on the market yet, as i know a brilliant board game developer who is doing great at that and posting games every once in a while online ..), having a nice chat and a glass of whine together ( as friends or even just the two of you) or discussing the latest football news and planning for the new season.. ;)
 
+Yes.. but the project is still in the planning phase! The application will be purely Java based, employing SpringREST and a little help from vaadin for the view components. 
+Oh, right, for the charity session we could open one branch for developers as well .. might be a lot of fun!!
+
 

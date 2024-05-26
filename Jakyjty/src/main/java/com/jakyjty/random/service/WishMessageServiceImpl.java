@@ -14,16 +14,18 @@ public class WishMessageServiceImpl implements IWishMessageService  {
 		LocalDateTime ldt = LocalDateTime.now();
 		
 		int hour = ldt.getHour();
+		String body = null;
 		if (hour <12) {
-			return "Good Morning, how are you today?";
+			body = "Good Morning, how are you today?";
 		}
-		if (hour <17) {
-			return "Good afternoon, good to see you!";
+		else if (hour <17) {
+			body = "Good afternoon, good to see you!";
 		}
-	    if (hour <21) {
-	    	return"Good evening : ) a warm welcome for a pleasant eve with nice people at Jakyjty!";
+		else if (hour <21) {
+	    	body ="Good evening : ) a warm welcome for a pleasant eve with nice people at Jakyjty!";
 	    }
-		return "Welcome! :) Get prepared for a vibrant night with nice and interesting people.. let us surprise you! ";
+		else 
+			body = "Welcome! :) Get prepared for a vibrant night with nice and interesting people.. let us surprise you! ";
 	}
 
 }

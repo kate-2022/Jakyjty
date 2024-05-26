@@ -29,3 +29,4 @@ public class WishMessageServiceImpl implements IWishMessageService  {
 	}
 
 }
+

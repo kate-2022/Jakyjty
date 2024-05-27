@@ -26,7 +26,7 @@ public class WishMessageServiceImpl implements IWishMessageService  {
 	    }
 		else 
 			body = "Welcome! :) Get prepared for a vibrant night with nice and interesting people.. let us surprise you! ";
+		return body;
 	}
-
 }
 

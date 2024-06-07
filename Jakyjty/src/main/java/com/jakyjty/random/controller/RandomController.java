@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.jakyjty.model.random.RandomResult;
+import com.jakyjty.model.user.User;
 import com.jakyjty.random.service.IWishMessageService;
 
 @RestController
@@ -18,16 +20,15 @@ public class RandomController {
 	private IWishMessageService service;
 	
 	@GetMapping("/greet")
-	public ResponseEntity<String> greetMesssage(){
-		String msg = service.generateWishMessage();
-		ResponseEntity<String> entity = new ResponseEntity<>(msg, HttpStatus.OK);
-		return entity;
+	public ResponseEntity<String> greetMesssage(User user){
+		String msg = service.generateWishMessage(user);
+		return new ResponseEntity<>(msg, HttpStatus.OK);
 	}
 	
 	@PostMapping("/result")
-	public ResponseEntity<String> rollTheDice(){
-		return null;
-		
+	public ResponseEntity<String> getRandomResult(){
+		String result = RandomResult.rollTheDice();
+		return new ResponseEntity<String> (result, HttpStatus.OK) ;
 	}
 
 }

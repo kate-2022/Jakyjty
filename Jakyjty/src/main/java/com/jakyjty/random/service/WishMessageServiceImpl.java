@@ -5,28 +5,32 @@ import java.time.LocalDateTime;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import com.jakyjty.model.user.User;
+
 @Service
 public class WishMessageServiceImpl implements IWishMessageService  {
 
 	@Override
-	public String generateWishMessage() {
+	public String generateWishMessage(User user) {
 		
 		LocalDateTime ldt = LocalDateTime.now();
-		
+		String greetName = user.getFirstName();
 		int hour = ldt.getHour();
 		String body = null;
 		if (hour <12) {
-			body = "Good Morning, how are you today?";
+			body = "Good Morning "+ greetName + ", how are you today?";
 		}
 		else if (hour <17) {
-			body = "Good afternoon, good to see you!";
+			body = "Good afternoon "+ greetName + ", good to see you!";
 		}
 		else if (hour <21) {
-	    	body ="Good evening : ) a warm welcome for a pleasant eve with nice people at Jakyjty!";
+	    	body ="Good evening " + greetName+ " : ) a warm welcome for a pleasant eve with nice people at Jakyjty!";
 	    }
 		else 
-			body = "Welcome! :) Get prepared for a vibrant night with nice and interesting people.. let us surprise you! ";
+			body = "Welcome "+ greetName + " ! :) Get prepared for a vibrant night with sympatic and interesting people.. "+
+		".. let us surprise you! ";
 		return body;
 	}
+
 }
 

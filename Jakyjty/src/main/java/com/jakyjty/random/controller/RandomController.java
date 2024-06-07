@@ -19,7 +19,7 @@ public class RandomController {
 	@Autowired
 	private IWishMessageService service;
 	
-	@GetMapping("/greet")
+	@PostMapping("/greet")
 	public ResponseEntity<String> greetMesssage(User user){
 		String msg = service.generateWishMessage(user);
 		return new ResponseEntity<>(msg, HttpStatus.OK);
@@ -28,7 +28,8 @@ public class RandomController {
 	@PostMapping("/result")
 	public ResponseEntity<String> getRandomResult(){
 		String result = RandomResult.rollTheDice();
-		return new ResponseEntity<String> (result, HttpStatus.OK) ;
+		return new ResponseEntity<String> ("You were selected by our Jakyjty night planner for the pleasure of " +result +
+				                            " !! Wishing you lots of good moments in nice company..", HttpStatus.OK) ;
 	}
 
 }

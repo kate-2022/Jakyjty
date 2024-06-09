@@ -1,4 +1,4 @@
-package com.jakyjty.random.controller;
+package com.jakyjty.user.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,31 +16,25 @@ import com.jakyjty.random.service.IWishMessageService;
 
 @RestController
 @RequestMapping("/api/random")
-public class RandomController {
+public class UserController {
 	
 	@Autowired
 	private IWishMessageService service;
 	
 	@PostMapping("/greet")
 	public ResponseEntity<String> greetMesssage(@RequestBody User user){
-		try {
+	
 		String msg = service.generateWishMessage(user);
 		return new ResponseEntity<String>(msg, HttpStatus.OK);
 	}
-		catch(Exception e){
-			return new ResponseEntity<String>("Something went wrong..", HttpStatus.INTERNAL_SERVER_ERROR);	
-		}
-	}
+
 	
 	@PostMapping("/result")
 	public ResponseEntity<String> getRandomResult(){
 		
-		try {
 		String result = RandomResult.rollTheDice();
 		return new ResponseEntity<String> ("You were selected by our Jakyjty night planner for the pleasure of " +result +	
 		" !! Wishing you lots of good moments in nice company..", HttpStatus.OK) ;
-	}catch(Exception e) {
-		return new ResponseEntity<String> ("The random generator obviously made a mistake", HttpStatus.INTERNAL_SERVER_ERROR );
-	}
+
 	}
 }

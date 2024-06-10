@@ -23,6 +23,7 @@ public class UserErrorControllerAdvice {
 		
 	}
 	
+	@ExceptionHandler(Exception.class)
 	public ResponseEntity<ErrorDetails>handleRemainingProblems(Exception e){	
 		System.out.println("UserErrorControllerAdvice.handleRemainingProblems()");
 		

@@ -24,7 +24,7 @@ public class User {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int userID;	
+	private Integer userID;	
 	@NonNull
 	private String firstName;
 	@NonNull

@@ -1,4 +1,4 @@
-package com.jakyjty.model.random;
+package com.jakyjty.random.service;
 
 import java.util.Random;
 

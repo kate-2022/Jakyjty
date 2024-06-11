@@ -1,5 +1,7 @@
 package com.jakyjty.model.user;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,13 +16,13 @@ public class Fascinations {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
+	private Long id;
 	
-	private String fascination;
+	private List<String> fascinations;
 
 	
 	@ManyToOne
-    @JoinColumn(name = "user_id")
-	User user;
+     @JoinColumn(name = "user_id")
+	private User user;
 	
 }

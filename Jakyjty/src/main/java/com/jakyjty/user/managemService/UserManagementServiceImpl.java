@@ -5,8 +5,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.jakyjty.dao.IUserDao;
-import com.jakyjty.model.user.User;
 import com.jakyjty.exception.*;
+import com.jakyjty.model.user.User;
 
 public class UserManagementServiceImpl implements IUserManagementService {
 	
@@ -21,7 +21,7 @@ public class UserManagementServiceImpl implements IUserManagementService {
 	}
 
 	@Override
-	public User fetchUserById(int id) {
+	public User fetchUserById(Long id) {
 	
 		return repo.findById(id).
 				orElseThrow(() -> new UserNotFoundException("User with id "+ id + " not found.."));

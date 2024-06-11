@@ -18,7 +18,7 @@ public class UserAge {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;	
+	private Long id;	
 	
 	private Date dob;
 }

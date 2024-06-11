@@ -18,11 +18,11 @@ public class UserGender {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;	
+	private Long id;	
 	
 	private String gender;
 	
-	@OneToOne(mappedBy= "UserGender")
+	@OneToOne(mappedBy= "userGender")
 	User user;
 
 }

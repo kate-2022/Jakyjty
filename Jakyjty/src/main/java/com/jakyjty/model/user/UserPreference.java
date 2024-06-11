@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,10 +13,17 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserPreferences {
+public class UserPreference {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int userID;	
+	private Long userID;	
+	
+	private String preference;
+	
+	@OneToOne(mappedBy = "userPreference")
+	User user;
+	
+	
 
 }

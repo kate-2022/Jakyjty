@@ -11,7 +11,7 @@ public class UserPresent {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;	
+	private Long id;	
 	
 	@NonNull
 	private Boolean online= false;

@@ -24,7 +24,8 @@ public class User {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Integer userID;	
+	private Long userID;	
+	
 	@NonNull
 	private String firstName;
 	@NonNull
@@ -50,11 +51,16 @@ public class User {
 	 @JoinColumn(name = "amountSpend_id", referencedColumnName = "id")
 	private AmountSpend amount;
 	
+	@OneToOne(cascade = CascadeType.ALL)
+	 @JoinColumn(name = "userPreference_id", referencedColumnName = "id")
+	private UserPreference preference;
+	
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = false)
 	private List<UserSessions> sessions;
 	
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = false)
 	private List<Fascinations> funAndFokus;
+	
 	
 	
 

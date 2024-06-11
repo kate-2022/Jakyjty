@@ -1,5 +1,8 @@
 package com.jakyjty.model.user;
 
+import java.time.LocalDateTime;
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -21,13 +24,16 @@ public class UserSessions {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;	
+	private Long id;	
 	
 	@NonNull
 	private Integer noOfSessions;
+	private LocalDateTime date;
+	
+	private List<LocalDateTime>userSessions;
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
+     @JoinColumn(name = "user_id")
     private User user;
  	
 

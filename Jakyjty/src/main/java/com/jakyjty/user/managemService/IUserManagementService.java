@@ -6,6 +6,6 @@ public interface IUserManagementService {
 	
 	
 	public String registerUser(User user);
-	public User fetchUserById(int id);
+	public User fetchUserById(Long id);
 
 }

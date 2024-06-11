@@ -18,7 +18,7 @@ public class AmountSpend {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;	
+	private Long id;	
 	
 	@NonNull
 	private Double amountSpendTotal;

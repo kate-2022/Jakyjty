@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.jakyjty.model.user.UserPreference;
 
-public interface IUserPreference extends CrudRepository<UserPreference, Long> {
+public interface IUserPreferenceRepo extends CrudRepository<UserPreference, Long> {
 
 }

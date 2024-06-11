@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.jakyjty.model.user.UserAge;
 
-public interface IUserAgeDao extends CrudRepository<UserAge, Long> {
+public interface IUserAgeRepository extends CrudRepository<UserAge, Long> {
 
 }

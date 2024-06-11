@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.jakyjty.model.user.UserGender;
 
-public interface IUserGender extends CrudRepository<UserGender, Long> {
+public interface IUserGenderRepo extends CrudRepository<UserGender, Long> {
 
 }

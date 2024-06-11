@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.jakyjty.model.user.UserPresent;
 
-public interface IUserPresent extends CrudRepository<UserPresent, Long> {
+public interface IUserPresentRepo extends CrudRepository<UserPresent, Long> {
 
 }

@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.jakyjty.model.user.AmountSpend;
 
-public interface IAmountSpendDao extends CrudRepository<AmountSpend, Long> {
+public interface IAmountSpendRepo extends CrudRepository<AmountSpend, Long> {
 
 }

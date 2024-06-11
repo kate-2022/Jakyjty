@@ -5,6 +5,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.jakyjty.model.user.User;
 
-public interface IUserDao extends CrudRepository<User, Long> {
+public interface IUserRepository extends CrudRepository<User, Long> {
 
 }

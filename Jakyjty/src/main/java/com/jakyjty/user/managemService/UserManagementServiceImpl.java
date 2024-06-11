@@ -4,14 +4,14 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.jakyjty.dao.IUserDao;
+import com.jakyjty.dao.IUserRepository;
 import com.jakyjty.exception.*;
 import com.jakyjty.model.user.User;
 
 public class UserManagementServiceImpl implements IUserManagementService {
 	
 	@Autowired
-	IUserDao repo;
+	IUserRepository repo;
 
 	@Override
 	public String registerUser(User user) {

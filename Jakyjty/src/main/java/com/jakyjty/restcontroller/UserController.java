@@ -1,4 +1,4 @@
-package com.jakyjty.controller;
+package com.jakyjty.restcontroller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,7 +15,7 @@ import com.jakyjty.random.service.IWishMessageService;
 import com.jakyjty.random.service.RandomResult;
 
 @RestController
-@RequestMapping("/api/random")
+@RequestMapping("/api/jakyjty")
 public class UserController {
 	
 	@Autowired

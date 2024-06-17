@@ -29,8 +29,7 @@ public class SecurityConfig {
 		@Bean
 		public SecurityFilterChain configure(HttpSecurity http) throws Exception {
 			http.authorizeHttpRequests(
-					request -> request.antMatchers("/","/index.jsp","/lib", "/lib/home","/lib/studReg","/lib/studLog", "/lib/libReg","/lib/libLog",
-							"/lib/display","/book", "/book/search", "/book/save" ).permitAll()
+					request -> request.antMatchers("/", "" ).permitAll()
 					.antMatchers("/lib/safe").hasRole("LIBRARIAN")
 					.antMatchers("/book/lend", "/book/display", "/book/bookBack").hasAnyRole("STUDENT", "LIBRARIAN")
 					.anyRequest().authenticated()

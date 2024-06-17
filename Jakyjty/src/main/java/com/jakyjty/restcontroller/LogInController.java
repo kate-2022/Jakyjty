@@ -1,4 +1,4 @@
-package com.jakyjty.controller;
+package com.jakyjty.restcontroller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

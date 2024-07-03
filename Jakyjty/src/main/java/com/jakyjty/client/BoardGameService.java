@@ -4,7 +4,7 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
-import com.jakyjty.charity.BoardGame;
+import com.jakyjty.charity.model.BoardGame;
 
 @Service ("service")
 public class BoardGameService {

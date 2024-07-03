@@ -1,4 +1,4 @@
-package com.jakyjty.charity;
+package com.jakyjty.charity.model;
 
 import lombok.Data;
 

@@ -10,5 +10,5 @@ and donating the amount you committet to a charity agency you have choosen in th
 You will have the option to play board games online ( maybe even some that are not available on the market yet, as i know a brilliant board game developer who is doing great at that and posting games every once in a while 
 online ..), having a nice chat and a glass of wine together ( as friends or even just the two of you) or discussing the latest football news and planning for the new season.. ;)
 
-Yes.. but the project is still in the planning phase! The application will be purely Java based, employing SpringREST and a little help from vaadin for the view components. 
+Yes.. but the project is still in the planning phase! But we have a banner now.. :P The application will be purely Java based, employing SpringREST and a little help from vaadin for the view components. 
 Oh, right, for the charity session we could open one branch for developers as well .. might be a lot of fun!!

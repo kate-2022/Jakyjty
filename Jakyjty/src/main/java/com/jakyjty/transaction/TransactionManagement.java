@@ -25,11 +25,17 @@ public class TransactionManagement {
 	public void beforeTransaction(JoinPoint jp) {
 		System.out.println("***** Before Transaction ****");
 	}
-	
+
 	@After("p1()")	
 	public void uponTransaction(JoinPoint jp) {
 		System.out.println(" ***** Upon Transaction *****");		
-		}
+	}
+
+	@After("p1()")	
+	public void uponTransaction() {
+		System.out.println(" ***** Upon Transaction *****");
+			
+	}
 	
 	@Around("p2()")
 	public void aroundAdvice(ProceedingJoinPoint pjp) {

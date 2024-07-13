@@ -11,7 +11,7 @@ public class JakyjtyApplication {
 	public static void main(String[] args) {
 		
 		SpringApplication application = new SpringApplication();
-		application.setBannerMode(Mode.CONSOLE);
+		// application.setBannerMode(Mode.CONSOLE);   by default!
 		
 		ConfigurableApplicationContext ctx = application.run(JakyjtyApplication.class, args);
 		ctx.close();

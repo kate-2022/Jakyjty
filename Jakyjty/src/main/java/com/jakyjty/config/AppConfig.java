@@ -9,6 +9,11 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfig {
 	
+	
+	// @Autowired
+	// private IUserManagementService service;
+	
+	
 	@Bean
 	public CommandLineRunner runOnce() {
 		

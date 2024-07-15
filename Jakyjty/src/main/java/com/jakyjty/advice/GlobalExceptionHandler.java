@@ -18,22 +18,22 @@ public class GlobalExceptionHandler {
 	public ResponseEntity<ErrorDetails> handleUserNotFound(UserNotFoundException unf) {
 		System.out.println("UserErrorControllerAdvice.handleUserNotFound()");
 		
-		ErrorDetails details = new ErrorDetails(LocalDateTime.now(), unf.getMessage(), "404-NotFound");
+		//ErrorDetails details = new ErrorDetails(LocalDateTime.now(), unf.getMessage(), "404-NotFound");
 		
-		return new ResponseEntity<ErrorDetails>(details, HttpStatus.NOT_FOUND);
+		return new ResponseEntity<ErrorDetails>(new ErrorDetails(LocalDateTime.now(), unf.getMessage(),"404-NotFound" ), HttpStatus.NOT_FOUND);
 		
 	}
 	
 	@ExceptionHandler(SessionExpiredException.class)
 	public ResponseEntity<ErrorDetails> handleSessionExpired(SessionExpiredException see){
 		System.out.println("UserErrorControllerAdvice.handleSessionExpired()");
-		ErrorDetails details2 = new ErrorDetails(LocalDateTime.now(), see.getMessage(), "404-NotFound");
+		//ErrorDetails details2 = new ErrorDetails(LocalDateTime.now(), see.getMessage(), "503-Service Unavailable");
 		
-		return new ResponseEntity<ErrorDetails>( details2,HttpStatus.NOT_FOUND);
+		return new ResponseEntity<ErrorDetails>( new ErrorDetails(LocalDateTime.now(), see.getMessage(), "503-Service Unavailable"),HttpStatus.SERVICE_UNAVAILABLE);
 	}
 	
 	@ExceptionHandler(Exception.class)
-	public ResponseEntity<ErrorDetails>handleRemainingProblems(Exception e){	
+	public ResponseEntity<?>handleRemainingProblems(Exception e){	
 		System.out.println("UserErrorControllerAdvice.handleRemainingProblems()");
 		
 		ErrorDetails details = new ErrorDetails(LocalDateTime.now(), e.getMessage(), "Problems in processing occured..");

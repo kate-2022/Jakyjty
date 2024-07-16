@@ -1,4 +1,4 @@
-package com.jakyjty.dao;
+package com.jakyjty.dao.userrepo;
 
 import org.springframework.data.repository.CrudRepository;
 //import org.springframework.data.repository.PagingAndSortingRepository;

@@ -1,5 +1,6 @@
-package com.jakyjty.model.user;
+package com.jakyjty.model.dateofentry;
 
+import java.sql.Date;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,20 +10,22 @@ import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
 
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserGender {
+public class DateOfEntry {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;	
 	
-	private String gender;
+	@NonNull
+	private Date dateOfEntry;
 	
-	@OneToOne(mappedBy= "userGender")
+	@OneToOne (mappedBy = "dateOfEntry")
 	User user;
 
 }

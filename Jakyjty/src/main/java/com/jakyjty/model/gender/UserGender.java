@@ -1,4 +1,7 @@
-package com.jakyjty.model.user;
+package com.jakyjty.model.gender;
+
+
+import com.jakyjty.model.user.User;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -8,24 +11,20 @@ import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.NonNull;
 
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class AmountSpend {
+public class UserGender {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;	
 	
-	@NonNull
-	private Double amountSpendTotal;
+	private String gender;
 	
-	@OneToOne (mappedBy = "amountSpend")
+	@OneToOne(mappedBy= "userGender")
 	User user;
-	
-	
-	
+
 }

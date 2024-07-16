@@ -1,4 +1,4 @@
-package com.jakyjty.dao;
+package com.jakyjty.dao.fascinations;
 
 import org.springframework.data.repository.CrudRepository;
 

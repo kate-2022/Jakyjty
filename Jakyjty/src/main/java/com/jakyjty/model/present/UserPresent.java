@@ -1,5 +1,7 @@
-package com.jakyjty.model.user;
+package com.jakyjty.model.present;
 
+
+import com.jakyjty.model.user.User;
 
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

@@ -1,11 +1,12 @@
-package com.jakyjty.model.user;
+package com.jakyjty.model.preference;
 
-import java.sql.Date;
+import com.jakyjty.model.user.User;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,11 +15,17 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserAge {
+public class UserPreference {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Long id;	
+	private Long userID;	
 	
-	private Date dob;
+	private String preference;
+	
+	@OneToOne(mappedBy = "userPreference")
+	User user;
+	
+	
+
 }

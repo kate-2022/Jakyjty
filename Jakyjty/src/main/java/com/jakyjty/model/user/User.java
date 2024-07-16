@@ -2,6 +2,15 @@ package com.jakyjty.model.user;
 
 import java.util.List;
 
+import com.jakyjty.model.age.UserAge;
+import com.jakyjty.model.amountspend.AmountSpend;
+import com.jakyjty.model.dateofentry.DateOfEntry;
+import com.jakyjty.model.fascinations.Fascinations;
+import com.jakyjty.model.gender.UserGender;
+import com.jakyjty.model.preference.UserPreference;
+import com.jakyjty.model.present.UserPresent;
+import com.jakyjty.model.sessions.UserSessions;
+
 import lombok.NonNull;
 
 import jakarta.persistence.CascadeType;

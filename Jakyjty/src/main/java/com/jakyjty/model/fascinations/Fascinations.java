@@ -1,6 +1,8 @@
-package com.jakyjty.model.user;
+package com.jakyjty.model.fascinations;
 
 import java.util.List;
+
+import com.jakyjty.model.user.User;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

@@ -1,6 +1,7 @@
 package com.jakyjty.model.user;
 
 import java.util.List;
+import java.util.Set;
 
 import com.jakyjty.model.age.UserAge;
 import com.jakyjty.model.amountspend.AmountSpend;
@@ -64,11 +65,15 @@ public class User {
 	 @JoinColumn(name = "userPreference_id", referencedColumnName = "id")
 	private UserPreference preference;
 	
-	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = false)
-	private List<UserSessions> sessions;
+	// @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = false)
+    @OneToMany(targetEntity= UserSessions.class, cascade = CascadeType.ALL)
+    @JoinColumn(name = "USER_ID", referencedColumnName= "userID")
+	private Set<UserSessions> sessions;
 	
-	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = false)
-	private List<Fascinations> funAndFokus;
+    // @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = false)
+	@OneToMany(targetEntity= Fascinations.class, cascade = CascadeType.ALL)
+	@JoinColumn(name = "USER_ID", referencedColumnName= "userID")
+	private Set<Fascinations> funAndFokus;
 	
 	
 	

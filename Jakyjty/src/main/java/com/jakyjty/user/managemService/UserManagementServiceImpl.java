@@ -2,11 +2,14 @@ package com.jakyjty.user.managemService;
 
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.jakyjty.charity.annotations.CustomTransaction;
 import com.jakyjty.dao.userrepo.IUserRepository;
 import com.jakyjty.exception.*;
 import com.jakyjty.model.user.User;
 
+@Service
 public class UserManagementServiceImpl implements IUserManagementService {
 	
 	@Autowired
@@ -16,8 +19,9 @@ public class UserManagementServiceImpl implements IUserManagementService {
 	@CustomTransaction
 	public String registerUser(User user) {
 		
+		String fName= repo.save(user).getFirstName();
+		return "Hi there " + fName +" good to have you with us at Jakyjty´s! A very warm welcome to you.. ";
 	
-		return null;
 	}
 
 	@Override

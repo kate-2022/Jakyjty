@@ -1,9 +1,10 @@
 package com.jakyjty.model.fascinations;
 
-import java.util.List;
+import java.util.Set;
 
 import com.jakyjty.model.user.User;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -20,11 +21,11 @@ public class Fascinations {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	
-	private List<String> fascinations;
+	private Set<String> fascinations;
 
 	
-	@ManyToOne
-     @JoinColumn(name = "user_id")
+	@ManyToOne(targetEntity=User.class, cascade=CascadeType.ALL)
+	@JoinColumn(name = "USER_ID", referencedColumnName= "userID")
 	private User user;
 	
 }

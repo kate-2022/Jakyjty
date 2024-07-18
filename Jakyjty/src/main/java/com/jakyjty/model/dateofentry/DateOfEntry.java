@@ -2,6 +2,8 @@ package com.jakyjty.model.dateofentry;
 
 import java.sql.Date;
 
+import com.jakyjty.model.user.User;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

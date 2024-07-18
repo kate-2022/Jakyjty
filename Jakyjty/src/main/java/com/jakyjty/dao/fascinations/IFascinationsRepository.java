@@ -1,7 +1,7 @@
 package com.jakyjty.dao.fascinations;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface IFascinationsRepository extends CrudRepository<IFascinationsRepository, Long> {
+public interface IFascinationsRepository extends JpaRepository<IFascinationsRepository, Long> {
 
 }

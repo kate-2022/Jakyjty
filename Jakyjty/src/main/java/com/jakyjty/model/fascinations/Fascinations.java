@@ -6,6 +6,7 @@ import com.jakyjty.model.user.User;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -24,8 +25,7 @@ public class Fascinations {
 	private Set<String> fascinations;
 
 	
-	@ManyToOne(targetEntity=User.class, cascade=CascadeType.ALL)
-	@JoinColumn(name = "USER_ID", referencedColumnName= "userID")
+	@ManyToOne(targetEntity=User.class, cascade=CascadeType.ALL, fetch= FetchType.LAZY)
 	private User user;
 	
 }

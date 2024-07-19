@@ -16,6 +16,7 @@ import lombok.NonNull;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -41,11 +42,11 @@ public class User {
 	@NonNull
 	private String lastName;
 	
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	 @JoinColumn(name = "age_id", referencedColumnName = "id")
 	private UserAge age;
 	
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	 @JoinColumn(name = "gender_id", referencedColumnName = "id")
 	private UserGender gender;
 	
@@ -53,7 +54,7 @@ public class User {
 	 @JoinColumn(name = "dateOfEntry_id", referencedColumnName = "id")
 	private DateOfEntry dateOE;
 	
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	 @JoinColumn(name = "userPresent_id", referencedColumnName = "id")
 	private UserPresent present;
 	
@@ -61,18 +62,15 @@ public class User {
 	 @JoinColumn(name = "amountSpend_id", referencedColumnName = "id")
 	private AmountSpend amount;
 	
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	 @JoinColumn(name = "userPreference_id", referencedColumnName = "id")
 	private UserPreference preference;
 	
-	// @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = false)
-    @OneToMany(targetEntity= UserSessions.class, cascade = CascadeType.ALL)
-    @JoinColumn(name = "USER_ID", referencedColumnName= "userID")
+    @OneToMany(targetEntity= UserSessions.class, cascade = CascadeType.ALL, mappedBy = "user", fetch = FetchType.EAGER)
 	private Set<UserSessions> sessions;
 	
-    // @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = false)
-	@OneToMany(targetEntity= Fascinations.class, cascade = CascadeType.ALL)
-	@JoinColumn(name = "USER_ID", referencedColumnName= "userID")
+  
+	@OneToMany(targetEntity= Fascinations.class, cascade = CascadeType.ALL, mappedBy = "user")
 	private Set<Fascinations> funAndFokus;
 	
 	

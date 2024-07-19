@@ -35,7 +35,6 @@ public class UserSessions {
 	
 	private Set<LocalDateTime>userSessions;
 
-	@JoinColumn(name = "USER_ID", referencedColumnName= "userID")
     @ManyToOne(targetEntity= User.class, cascade = CascadeType.ALL)
     private User user;
  	

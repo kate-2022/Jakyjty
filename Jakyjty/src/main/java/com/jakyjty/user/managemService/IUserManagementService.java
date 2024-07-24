@@ -5,6 +5,7 @@ import com.jakyjty.charity.annotations.*;
 
 public interface IUserManagementService {
 	
+	
 	@CustomTransaction
 	public String registerUser(User user);
 	@CustomTransaction

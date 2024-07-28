@@ -6,7 +6,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 
 import com.jakyjty.charity.model.BoardGame;
 
-@Service ("service")
+@Service ("boardGameService")
 public class BoardGameService {
 	
 	private static final String REST_END_POINT ="https://steamcommunity.com/sharedfiles/filedetails/?id=2876186816";

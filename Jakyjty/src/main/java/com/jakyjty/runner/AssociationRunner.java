@@ -8,7 +8,7 @@ import org.springframework.web.client.RestTemplate;
 @Component
 public class AssociationRunner implements CommandLineRunner {
 
-	@SuppressWarnings("deprecation")
+//	@SuppressWarnings("deprecation")
 	@Override
 	public void run(String... args) throws Exception {
 		System.out.println("AssociationRunner.run()");
@@ -18,8 +18,10 @@ public class AssociationRunner implements CommandLineRunner {
 		 ResponseEntity<String> responseEntity = template.getForEntity(serviceUrl, String.class);
 		 
 		 System.out.println("ResponseBody              :: " + responseEntity.getBody());
-		 System.out.println("ResponseStatus Code Value :: " + responseEntity.getStatusCodeValue());
-		 System.out.println("ResponseStatus Code       :: " + responseEntity.getStatusCode().name());
+//		 System.out.println("ResponseStatus Code Value :: " + responseEntity.getStatusCodeValue());
+		 System.out.println("ResponseStatus Code       :: " + responseEntity.getStatusCode().value());
+//		 System.out.println("ResponseStatus Code       :: " + responseEntity.getStatusCode().name());
+		 System.out.println("ResponseStatus Code       :: " + responseEntity.getStatusCode().toString());
 		 System.out.println("****************************************************************");
 		 
 	}

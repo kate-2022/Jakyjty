@@ -11,7 +11,7 @@
 	<groupId>com.whichTy</groupId>
 	<artifactId>Jakyjty</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>pom</packaging>
 	<name>Jakyjty</name>
 	<description>CharityOrParty</description>
 	<properties>
@@ -147,4 +147,16 @@
 		</plugins>
 	</build>
 
+	<modules>
+		<module>jakyjty.user</module>
+		<module>jakyjty.usersettings</module>
+		<module>jakyjty.config</module>
+		<module>jakyjty.charity</module>
+		<module>jakyjty.exception</module>
+		<module>jakyjty.clients</module>
+		<module>jakyjty.service</module>
+		<module>jakyjty.transaction</module>
+		<module>jakyjty.transactions</module>
+		<module>jakyjty.auth</module>
+	</modules>
 </project>

@@ -1,4 +1,4 @@
-package com.jakyjty.client;
+package com.jakyjty.boardgameclient;
 
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;

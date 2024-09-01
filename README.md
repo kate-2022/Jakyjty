@@ -2,7 +2,7 @@ This should be my next project, maybe a bit ambitious..but fun! This will be a p
 like-minded people looking for nice and interesting company. If your friends are out there waiting for you - no doubt, just go join them! 
 If you are at home alone, not knowing how to spend the eve, either calling around few people to get some company, going to a bar by yourself or grabbing the cosy blanket and the remote control - then this is for you!
 
-Jakyjty stands for 'which -ty', meaning you have the choice between party and charity, 'яакий' meaning 'which' in Ukrainian. So the basic is that you commit an amount of your choice (starting from 10-20 Euros), 
+Jakyjty stands for 'which -ty', meaning you have the choice between party and charity, 'яакий' meaning 'which' in Ukrainian. So the basic is that you commit an amount of your choice (starting from 5-10 Euros), 
 then press a button by that a random generator is taking up it´s work, choosing between these 2 options for you: charity or party! 
 This means that if it chooses 'party' you get suggestions of fellow participants in your region that also got this option to find a common meeting place for an uncomplicated hang-out together and meet new people. 
 If it chooses 'charity' you will have the opportunity to choose from some areas within the platform suggesting several possibilities to spend some great time together with other likeminded people while staying at home 

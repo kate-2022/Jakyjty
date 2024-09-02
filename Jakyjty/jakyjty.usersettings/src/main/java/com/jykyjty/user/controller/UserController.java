@@ -1,4 +1,4 @@
-package com.jakyjty.restcontroller;
+package com.jykyjty.user.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

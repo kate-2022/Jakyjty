@@ -21,6 +21,10 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
@@ -158,5 +162,6 @@
 		<module>jakyjty.transaction</module>
 		<module>jakyjty.transactions</module>
 		<module>jakyjty.auth</module>
+		<module>jakyjty.login</module>
 	</modules>
 </project>

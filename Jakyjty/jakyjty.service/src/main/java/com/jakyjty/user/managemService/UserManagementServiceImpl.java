@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 
 import com.jakyjty.charity.annotations.CustomTransaction;
 import com.jakyjty.dao.userrepo.IUserRepository;
-import com.jakyjty.exceptions.*;
 import com.jakyjty.model.user.User;
 
 @Service
@@ -31,6 +30,7 @@ public class UserManagementServiceImpl implements IUserManagementService {
 		return repo.findById(id).
 				orElseThrow(() -> new UserNotFoundException("User with id "+ id + " not found.."));
 	}
+
 
 
 	}

@@ -1,4 +1,4 @@
 module service.Module{
 	
-	requires module user.Module;
+	requires module usersettings.Module;
 }

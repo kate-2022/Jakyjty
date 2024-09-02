@@ -1,5 +1,5 @@
-module user.Module {
+module usersettings.Module {
 	
-	requires module.config.Module;
-	
+	requires module exceptions.Module;
+	uses IUserManagementService.name;
 }

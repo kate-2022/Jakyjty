@@ -163,5 +163,6 @@
 		<module>jakyjty.transactions</module>
 		<module>jakyjty.auth</module>
 		<module>jakyjty.login</module>
+		<module>jakyjty.exceptions</module>
 	</modules>
 </project>

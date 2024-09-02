@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.jakyjty.charity.annotations.CustomTransaction;
 import com.jakyjty.dao.userrepo.IUserRepository;
-import com.jakyjty.exception.*;
+import com.jakyjty.exceptions.*;
 import com.jakyjty.model.user.User;
 
 @Service

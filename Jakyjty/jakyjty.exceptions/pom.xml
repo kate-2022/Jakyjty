@@ -5,5 +5,5 @@
     <artifactId>Jakyjty</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>jakyjty.exception</artifactId>
+  <artifactId>jakyjty.exceptions</artifactId>
 </project>

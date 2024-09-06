@@ -3,7 +3,10 @@ package com.jakyjty.user;
 
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Category;
+import org.apache.log4j.ConsoleAppender;
 import org.apache.log4j.LogManager;
+import org.apache.log4j.SimpleLayout;
 import org.apache.log4j.spi.LoggerFactory;
 
 
@@ -11,7 +14,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
-import ch.qos.logback.core.ConsoleAppender;
 
 
 
@@ -20,13 +22,13 @@ import ch.qos.logback.core.ConsoleAppender;
 public class JakyjtyMs1UserApplication {
 	
 
-		private static final Logger LOGGER = LogManager.getLogger(JakyjtyMs1UserApplication.class);
+		private static final org.apache.log4j.Logger LOGGER = LogManager.getLogger(JakyjtyMs1UserApplication.class);
 	 
 		static {
 		SimpleLayout layout = new SimpleLayout();
 		ConsoleAppender appender = new ConsoleAppender(layout);
-		LOGGER.addAppender(appender);
-		LOGGER.setLevel(Level.ERROR);
+		 LOGGER.addAppender(appender);
+		 LOGGER.setLevel(Level.ERROR);
 		}
 		
 		

@@ -15,27 +15,25 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 
-
-
 @SpringBootApplication
 @EnableDiscoveryClient
 public class JakyjtyMs1UserApplication {
 	
-
-		private static final org.apache.log4j.Logger LOGGER = LogManager.getLogger(JakyjtyMs1UserApplication.class);
-	 
-		static {
-		SimpleLayout layout = new SimpleLayout();
-		ConsoleAppender appender = new ConsoleAppender(layout);
-		 LOGGER.addAppender(appender);
-		 LOGGER.setLevel(Level.ERROR);
-		}
-		
+//
+//	private static final org.apache.log4j.Logger LOGGER = LogManager.getLogger(JakyjtyMs1UserApplication.class);
+//	
+//	static {
+//		SimpleLayout layout = new SimpleLayout();
+//		ConsoleAppender appender = new ConsoleAppender(layout);
+//		LOGGER.addAppender(appender);
+//	    LOGGER.setLevel(Level.ERROR);
+//	}
+//		
 		
 	public static void main(String[] args) {
 		SpringApplication.run(JakyjtyMs1UserApplication.class, args);
 		
-		LOGGER.debug("start of main method...");
+		// LOGGER.debug("start of main method...");
 	}
 
 }

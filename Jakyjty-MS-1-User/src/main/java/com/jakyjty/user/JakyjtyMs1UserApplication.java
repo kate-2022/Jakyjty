@@ -33,7 +33,7 @@ public class JakyjtyMs1UserApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(JakyjtyMs1UserApplication.class, args);
 		
-		// LOGGER.debug("start of main method...");
+		// LOGGER.debug("start of MS1 main method...");
 	}
 
 }

@@ -41,7 +41,7 @@ public class UserController {
 	}
 	
 	
-	
+	// trying to update module-info.java for user.dao and user.model - why is git telling all would be up to date??
 	
 
 }

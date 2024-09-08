@@ -24,7 +24,7 @@ public class UserController {
 	
 	
 	
-	@GetMapping("/api/user/greet")
+	@GetMapping("/greet")
 	public ResponseEntity<String> greetUser(@RequestBody User user){
 		String msg= service.generateWishMessage(user);
 		

@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/login")
 public class LogInController {
 	
+	@GetMapping("/greet")
 	public ResponseEntity<String> someRestController (@RequestBody User user ){
 		String msg = "Login successful for user" + user.getUsername();
 		

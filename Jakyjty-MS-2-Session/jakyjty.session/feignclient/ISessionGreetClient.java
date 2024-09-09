@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import com.jakyjty.model.user.User;
 
 
-@FeignClient(name = "Jakyjty-MS-1-User")
+@FeignClient(name = "MS1-User")
 public interface IUserClient {
 	
 	@GetMapping("/api/user/greet")

@@ -9,11 +9,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import com.jakyjty.model.user.User;
 
 
-@FeignClient(name = "MS1-User")
-
+@FeignClient(name = "MS-1-USER")
 public interface IUserClient {
 	
-	@GetMapping("/api/user/greet")
+	@GetMapping("/greet")
 	public ResponseEntity<String> greetUser(@RequestBody User user);
 
 }

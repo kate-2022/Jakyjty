@@ -10,6 +10,7 @@ import com.jakyjty.model.user.User;
 
 
 @FeignClient(name = "MS1-User")
+
 public interface IUserClient {
 	
 	@GetMapping("/api/user/greet")

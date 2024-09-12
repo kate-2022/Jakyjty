@@ -1,4 +1,4 @@
-package com.jakyjty.user;
+package com.jakyjty;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

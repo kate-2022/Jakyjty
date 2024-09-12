@@ -5,7 +5,7 @@
     <artifactId>Jakyjty-MS-1-User</artifactId>
     <version>0.0.1</version>
   </parent>
-  <groupId>com.jakyjty.user.model</groupId>
-  <artifactId>jakyjty.user.model</artifactId>
+  <groupId>com.jakyjty.users</groupId>
+  <artifactId>jakyjty.users</artifactId>
   <packaging>war</packaging>
 </project>

@@ -10,6 +10,7 @@ import com.jakyjty.model.user.User;
 
 
 @FeignClient(name = "MS-1-USER")
+@RibbonClient(name = "MS-1-USER")
 public interface IUserClient {
 	
 	@GetMapping("/greet")

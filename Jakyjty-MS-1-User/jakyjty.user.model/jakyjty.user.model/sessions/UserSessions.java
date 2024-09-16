@@ -21,7 +21,9 @@ import lombok.NonNull;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserSessions {
+public class UserSessions implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
 	
 	static int sessions = 0;
 	

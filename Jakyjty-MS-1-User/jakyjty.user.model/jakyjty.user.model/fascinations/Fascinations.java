@@ -1,5 +1,6 @@
 package com.jakyjty.model.fascinations;
 
+import java.time.LocalDateTime;
 import java.util.Set;
 
 import com.jakyjty.model.user.User;
@@ -12,11 +13,18 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
 
-@Data
 @Entity
-public class Fascinations {
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Fascinations implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)

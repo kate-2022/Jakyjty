@@ -72,6 +72,14 @@ public class User {
   
 	@OneToMany(targetEntity= Fascinations.class, cascade = CascadeType.ALL, mappedBy = "user")
 	private Set<Fascinations> funAndFokus;
+
+
+	@Override
+	public String toString() {
+		return "User [userID=" + userID + ", firstName=" + firstName + ", lastName=" + lastName + ", age=" + age
+				+ ", gender=" + gender + ", dateOE=" + dateOE + ", present=" + present + ", amount=" + amount
+				+ ", preference=" + preference + ", sessions=" + sessions + ", funAndFokus=" + funAndFokus + "]";
+	}
 	
 	
 	

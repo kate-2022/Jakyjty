@@ -1,8 +1,7 @@
-package com.jakyjty.model.present;
+package com.jakyjty.model.gender;
 
 
-import java.time.LocalDateTime;
-import java.util.Set;
+import java.io.Serializable;
 
 import com.jakyjty.model.user.User;
 
@@ -14,13 +13,12 @@ import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.NonNull;
 
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserPresent implements Serializable {
+public class UserGender implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -28,10 +26,14 @@ public class UserPresent implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;	
 	
-	@NonNull
-	private Boolean online= false;
+	private String gender;
 	
-    @OneToOne(mappedBy = "userPresent")
-    private User user;
+	@OneToOne(mappedBy= "userGender")
+	User user;
+
+	@Override
+	public String toString() {
+		return "UserGender [id=" + id + ", gender=" + gender + ", user=" + user + "]";
+	}
 
 }

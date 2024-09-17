@@ -1,5 +1,6 @@
 package com.jakyjty.model.dateofentry;
 
+import java.io.Serializable;
 import java.sql.Date;
 
 import com.jakyjty.model.user.User;
@@ -31,5 +32,10 @@ public class DateOfEntry implements Serializable {
 	
 	@OneToOne (mappedBy = "dateOfEntry")
 	User user;
+
+	@Override
+	public String toString() {
+		return "DateOfEntry [id=" + id + ", dateOfEntry=" + dateOfEntry + ", user=" + user + "]";
+	}
 
 }

@@ -29,6 +29,11 @@ public class AmountSpend implements Serializable {
 	
 	@OneToOne (mappedBy = "amountSpend")
 	User user;
+
+	@Override
+	public String toString() {
+		return "AmountSpend [id=" + id + ", amountSpendTotal=" + amountSpendTotal + ", user=" + user + "]";
+	}
 	
 	
 	

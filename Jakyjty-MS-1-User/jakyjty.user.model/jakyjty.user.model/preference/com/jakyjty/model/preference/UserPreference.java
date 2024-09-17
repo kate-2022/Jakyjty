@@ -1,5 +1,7 @@
 package com.jakyjty.model.preference;
 
+import java.io.Serializable;
+
 import com.jakyjty.model.user.User;
 
 import jakarta.persistence.Entity;
@@ -27,6 +29,11 @@ public class UserPreference implements Serializable {
 	
 	@OneToOne(mappedBy = "userPreference")
 	User user;
+
+	@Override
+	public String toString() {
+		return "UserPreference [userID=" + userID + ", preference=" + preference + ", user=" + user + "]";
+	}
 	
 	
 

@@ -1,5 +1,6 @@
 package com.jakyjty.model.age;
 
+import java.io.Serializable;
 import java.sql.Date;
 
 import jakarta.persistence.Entity;
@@ -24,4 +25,9 @@ public class UserAge implements Serializable{
 	private Long id;	
 	
 	private Date dob;
+
+	@Override
+	public String toString() {
+		return "UserAge [id=" + id + ", dob=" + dob + "]";
+	}
 }

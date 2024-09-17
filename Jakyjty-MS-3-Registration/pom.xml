@@ -79,11 +79,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>com.jakyjty.user</groupId>
-			<artifactId>Jakyjty-MS-1-User</artifactId>
-			<version>0.0.1</version>
-		</dependency>
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>

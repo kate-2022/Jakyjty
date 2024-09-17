@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.jakyjty.model.user.User;
 import com.jakyjty.random.service.IWishMessageService;
+import com.jakyjty.random.service.RandomResult;
 
 @RestController
 @RequestMapping("/api/user")

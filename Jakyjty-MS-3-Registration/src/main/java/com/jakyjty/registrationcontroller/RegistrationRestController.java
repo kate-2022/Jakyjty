@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.jakyjty.model.user.User;
 
+import io.swagger.annotations.ApiOperation;
+
 @RestController
 @RequestMapping("/register")
 public class RegistrationRestController {
@@ -20,6 +22,7 @@ public class RegistrationRestController {
 	
 
 	@PostMapping
+	@ApiOperation("Initial user registration")
 	public ResponseEntity<String>registerUser(){
 		
 		User user = new User();

@@ -1,4 +1,0 @@
-module transaction.Module {
-	
-	
-}

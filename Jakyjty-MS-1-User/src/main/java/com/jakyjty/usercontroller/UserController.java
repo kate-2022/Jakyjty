@@ -14,6 +14,15 @@ import com.jakyjty.model.user.User;
 import com.jakyjty.random.service.IWishMessageService;
 import com.jakyjty.random.service.RandomResult;
 
+import io.swagger.annotations.ApiOperation;
+
+
+/*
+ * This class is used to greet the user and communicate the random decision
+ * 
+ *  @author Kate
+ * 
+ */
 @RestController
 @RequestMapping("/api/user")
 public class UserController {
@@ -21,17 +30,28 @@ public class UserController {
 	@Autowired
 	private IWishMessageService service;
 
-
-
+/*
+ * This method is used for an initial greeting in get request
+ * 
+ * @param user (upon login)
+ * @return 
+ */	
 	@GetMapping("/greet")
+	@ApiOperation("Greet user")
 	public ResponseEntity<String> greetUser(@RequestBody User user){
 		String msg= service.generateWishMessage(user);
 
-		return new ResponseEntity<String>(msg, HttpStatus.OK);
-			
+		return new ResponseEntity<String>(msg, HttpStatus.OK);	
 	}
 	
+	/*
+	 * This method is used to communicate the random result to the user upon greeting
+	 * 
+	 * @param user
+	 * @return 
+	 */
 	@PostMapping
+	@ApiOperation("Random result")
 	public ResponseEntity<String>getRandomResult(@RequestBody User user){
 		
 		String result = RandomResult.rollTheDice();

@@ -1,6 +1,5 @@
 package com.jakyjty.model.user;
 
-import java.util.List;
 import java.util.Set;
 
 import com.jakyjty.model.age.UserAge;
@@ -11,8 +10,6 @@ import com.jakyjty.model.gender.UserGender;
 import com.jakyjty.model.preference.UserPreference;
 import com.jakyjty.model.present.UserPresent;
 import com.jakyjty.model.sessions.UserSessions;
-
-import lombok.NonNull;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
@@ -26,6 +23,11 @@ import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
+
+import java.io.Serializable;
+import java.sql.Date;
+
 
 @Entity
 @Data

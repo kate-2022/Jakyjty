@@ -10,11 +10,17 @@ import org.springframework.web.bind.annotation.RestController;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
-@RequestMapping("api/service")
+@RequestMapping("/api")
 public class ServiceController {
 	
 //	@Autowired
 //	User user = null;
+	
+	@GetMapping("/home")
+	public String welcomeHome() {
+		return "Welcome to Jakyjty! Please create an account or log in to your account.";
+	}
+	
 	
 	@GetMapping("/register/{firstName}")
 	@ApiOperation("User registration service")
@@ -22,6 +28,11 @@ public class ServiceController {
 		String msg = "Hello " + firstName + "please start your registration here.. ";
 	
 		return new ResponseEntity(msg, HttpStatus.OK);
+	}
+	
+	@GetMapping("/logIn")
+	public String personalLogIn () {
+		return "Login succesful";
 	}
 
 }

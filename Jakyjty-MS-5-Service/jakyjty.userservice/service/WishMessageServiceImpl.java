@@ -1,13 +1,12 @@
 package com.jakyjty.random.service;
 
 import java.time.LocalDateTime;
-
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.jakyjty.model.user.User;
 
-@Service
+
+@Service("wishMessageService")
 public class WishMessageServiceImpl implements IWishMessageService  {
 
 	@Override
@@ -31,6 +30,7 @@ public class WishMessageServiceImpl implements IWishMessageService  {
 		".. let us surprise you! ";
 		return body;
 	}
+
 
 }
 

@@ -1,5 +1,7 @@
 package com.jakyjty.model.amountspend;
 
+import java.io.Serializable;
+
 import com.jakyjty.model.user.User;
 
 import jakarta.persistence.Entity;

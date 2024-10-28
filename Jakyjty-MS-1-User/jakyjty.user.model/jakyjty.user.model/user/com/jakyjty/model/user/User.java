@@ -1,5 +1,6 @@
 package com.jakyjty.model.user;
 
+import java.io.Serializable;
 import java.util.Set;
 
 import com.jakyjty.model.age.UserAge;
@@ -25,15 +26,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
-import java.io.Serializable;
-import java.sql.Date;
-
 
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class User implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -74,7 +74,6 @@ public class User {
   
 	@OneToMany(targetEntity= Fascinations.class, cascade = CascadeType.ALL, mappedBy = "user")
 	private Set<Fascinations> funAndFokus;
-
 
 	@Override
 	public String toString() {

@@ -18,7 +18,7 @@ public class ServiceController {
 	
 	@GetMapping("/home")
 	public String welcomeHome() {
-		return "Welcome to Jakyjty! Please create an account or log in to your account.";
+		return "Welcome to Jakyjty! Please create an account or log in to your existing account.";
 	}
 	
 	

@@ -3,15 +3,17 @@ package com.jakyjty.user.present;
 
 import java.io.Serializable;
 
+import com.jakyjty.model.user.User;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
+import lombok.AllArgsConstructor;
 
 @Entity
 @Data
@@ -37,3 +39,4 @@ public class UserPresent implements Serializable {
 	}
 
 }
+

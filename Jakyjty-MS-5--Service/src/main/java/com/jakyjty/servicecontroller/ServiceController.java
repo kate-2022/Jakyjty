@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -18,18 +19,27 @@ public class ServiceController {
 //	User user = null;
 	
 	@GetMapping("/home")
-	public String welcomeHome() {
+	public static String welcomeHome() {
 		return "Welcome to Jakyjty! Please create an account or log in to your existing account.";
 	}
 	
 	
-	@GetMapping("/register/{firstName}")
-	@ApiOperation("User registration service")
-	public ResponseEntity<String> preRegisterUser(@PathVariable String firstName){
+	@GetMapping("/preregister/{firstName}")
+	public static ResponseEntity<String> preRegisterUser(@PathVariable String firstName){
 		String msg = "Hello " + firstName + "please start your registration here.. ";
-	
 		return new ResponseEntity(msg, HttpStatus.OK);
 	}
+	
+	@GetMapping("register")
+	@ApiOperation("User registration service")
+	public ResponseEntity<String>registerUser(@RequestParam String firstName, @RequestParam String lastName){
+		String msg2 = "Please enter your registration details:";
+		
+		return new ResponseEntity(msg2, HttpStatus.OK);
+		
+	}
+	
+	
 	
 	@GetMapping("/logIn")
 	public String personalLogIn () {

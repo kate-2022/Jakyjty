@@ -33,8 +33,10 @@ public class SecurityConfigApp {
 	@Bean
 	  public SecurityFilterChain userDefinedFilter (HttpSecurity http) throws Exception {
         http.authorizeHttpRequests(
-        				request -> request.requestMatchers("/api/security/", "/api/security/home ", "/register/{firstName}", "/api/security/oauth")
+        				request -> request.requestMatchers("/api/", "/api/home ", "/register/{firstName}", "/api/oauth")
                         .permitAll()
+                        .requestMatchers("/api/admin").hasAnyRole("ADMIN", "USER")
+                        .requestMatchers("/api/user").hasRole("USER")
                         .anyRequest()
                         .authenticated()
                        ).formLogin();		

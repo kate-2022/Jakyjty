@@ -93,6 +93,11 @@
 			<artifactId>Jakyjty-MS-1--User</artifactId>
 			<version>0.0.1</version>
 		</dependency>
+		<dependency>
+			<groupId>com.jakyjty.entrance</groupId>
+			<artifactId>Jakyjty-API-Gateway</artifactId>
+			<version>0.0.1</version>
+		</dependency>
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>

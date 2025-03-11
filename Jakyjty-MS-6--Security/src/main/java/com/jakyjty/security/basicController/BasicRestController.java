@@ -1,7 +1,10 @@
 package com.jakyjty.security.basicController;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,8 +30,12 @@ public class BasicRestController {
 	}
 	
 	@GetMapping("/register/{firstName}")
-	public void registration() {
-		ServiceController.preRegisterUser(String firstName);
+	public ResponseEntity<String> registration (@PathVariable String firstname, @PathVariable String lastname) {
+		User user = new User();
+		user.setFirstName(firstname);
+		user.setLastName(lastname);
+		ServiceController.preRegisterUser(firstname);
+		return new ResponseEntity<String>(firstname, HttpStatus.OK);
 	}
 		
 	@GetMapping("/oauth")

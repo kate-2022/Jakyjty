@@ -20,7 +20,9 @@ public class ServiceController {
 	
 	@GetMapping("/home")
 	public static String welcomeHome() {
-		return "Welcome to Jakyjty! Please create an account or log in to your existing account.";
+		return "<h1 style='colour:blue, text-align:center;'>Welcome to Jakyjty!</h1> </br>" + 
+				"Please create an account or log in to your existing account." +
+				"<a href='https://kyivindependent.com/'> Click here for demonstration purpose..</a>";
 	}
 	
 	
